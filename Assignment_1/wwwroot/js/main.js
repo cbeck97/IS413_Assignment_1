@@ -41,6 +41,9 @@ function calcGrade() {
     let finalGrade = assignments + groupProject + quizzes + exams + intex;
     let output = letterGrade(finalGrade) + ' ( ' + finalGrade.toFixed(2) + '% )'
     alert(output)
+
+    //This is the piece of code that will write to the html page. I am having issues getting it to stay on the page after the form
+    //submission, so that is why I create the alert above. The alert is just to show that I had it working properly.
     $('#grade').html(letterGrade(finalGrade) + ' ( ' + finalGrade.toFixed(2) + '% )');
        
 }
