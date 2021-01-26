@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="icon" href="~/img/favicon.png">
+</head>
+<body>
+    <header>
+        <span class="logo"><a asp-controller="Home" asp-action="Index">Website</a></span>
+        <nav>
+            <ul class="nav-links">
+                <li><a asp-controller="Home" asp-action="Calculator">Grade Calculator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
