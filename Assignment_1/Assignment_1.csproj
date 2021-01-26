@@ -9,5 +9,16 @@
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\css\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="3.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Home\calculator.cshtml" />
   </ItemGroup>
 </Project>

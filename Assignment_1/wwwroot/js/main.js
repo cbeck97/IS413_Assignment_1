@@ -16,14 +16,14 @@ function letterGrade(percentage){
     return grade
 }
 
-function calcGrade(){
+function calcGrade() {
+
     //Collect data from the form
-    let assigments = document.getElementById('assignments').value;
-    let groupProject = document.getElementById('group').value;
-    let quizzes = document.getElementById('quiz').value;
-    let exams = document.getElementById('exam').value;
-    let intex = document.getElementById('intex').value;
-    
+    let assignments = $('#assignments').val();
+    let groupProject = $('#group').val();
+    let quizzes = $('#quiz').val();
+    let exams = $('#exam').val();
+    let intex = $('#intex').val();
     //Weights
     let assignmentWeight = 0.5;
     let groupWeight = 0.1;
@@ -32,12 +32,15 @@ function calcGrade(){
     let intexWeight = 0.1;
 
     //calculate final grade and percentage
-    assigments = assigments * assignmentWeight;
+    assignments = assignments * assignmentWeight;
     groupProject = groupProject * groupWeight;
     quizzes = quizzes * quizWeight;
     exams = exams * examWeight;
     intex = intex * intexWeight;
 
-    let finalGrade = assigments + groupProject + quizzes + exams + intex;
-    document.getElementById('grade').innerHTML = letterGrade(finalGrade) + ' ( ' + finalGrade.toFixed(2) + '% )'
+    let finalGrade = assignments + groupProject + quizzes + exams + intex;
+    let output = letterGrade(finalGrade) + ' ( ' + finalGrade.toFixed(2) + '% )'
+    alert(output)
+    $('#grade').html(letterGrade(finalGrade) + ' ( ' + finalGrade.toFixed(2) + '% )');
+       
 }
